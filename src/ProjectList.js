@@ -1,17 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import useFetch from './useFetch';
+import React, { useState } from 'react';
 
 function ProjectList() {
-    const { data: projects, loading, error } = useFetch('http://localhost:3000/projects');
+    const projects = [
+        {
+            id: 1,
+            title: "I'mposter",
+            description: "I'mposter ist ein fiktives Soziales Netzwerk, speziell entwickelt für Freundesgruppen. Dieses Projekt wurde als Multimediaprojekt 1 an der FH Salzburg verwirklicht.",
+            images: ["./images/Imposter/imposter4.png", "./images/Imposter/imposter1.png", "./images/Imposter/imposter2.png", "./images/Imposter/imposter3.png"]
+        },
+        {
+            id: 2,
+            title: "Consumer Score",
+            description: "An assignment from the Machine Learning Course, regarding consumer behaviour",
+            images: "./images/ml.png"
+        },
+        {
+            id: 3,
+            title: "Funny Gnome Drawing",
+            description: "This is a recent drawing of a gnome I made. He is a jolly fella",
+            images: "./images/gnome.png"
+        }
+    ];
+
     const [openProject, setOpenProject] = useState(null);
-
-    if (loading) {
-        return (<div className='loading'><p>Loading data, please wait...</p></div>);
-    }
-
-    if (error) {
-        return (<div className="error"><p>Error: {error}</p></div>);
-    }
 
     const toggleProjectDetails = (id) => {
         setOpenProject(openProject === id ? null : id);
@@ -19,19 +30,28 @@ function ProjectList() {
 
     return (
         <div>
-            <br></br>
+            <br />
             <div className="projects">
-                {projects && projects.map((project) => (
+                {projects.map((project) => (
                     <div key={project.id} className="project">
                         <h2>{project.title}</h2>
                         <button onClick={() => toggleProjectDetails(project.id)}>
-                            {openProject === project.id ? 'Hide Details' : 'Show Details'}
+                            {openProject === project.id ? 'Weniger anzeigen' : 'Mehr anzeigen'}
                         </button>
                         {openProject === project.id && (
                             <div>
-                                <p>{project.description}</p>
-                                <img src={project.image} alt={project.title} className='project-image' />
+                            <p>{project.description}</p>
+                            <div className="project-images">
+                                {project.images.map((image, index) => (
+                                    <img
+                                        key={index}
+                                        src={image}
+                                        alt={`${project.title} ${index + 1}`}
+                                        className="project-image"
+                                    />
+                                ))}
                             </div>
+                        </div>
                         )}
                     </div>
                 ))}
