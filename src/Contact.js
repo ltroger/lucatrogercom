@@ -4,9 +4,9 @@ import ContactForm from './form';
 const Contact = () => {
     return (
         <main>
-            <div>
-                <h1>Contact Page</h1>
-                <p>Feel free to reach out to me if you have any questions</p>
+            <div className='contact'>
+                <h1>Kontakt</h1>
+                <p>Hier kann man mich erreichen. Ich werde mich so schnell es geht bei Ihnen zurückmelden.</p>
                 <ContactForm />
             </div>
         </main>

@@ -4,9 +4,13 @@ import ProjectList from './ProjectList';
 const Home = () => {
     return (
         <main>
-            {/* <img src="../images/logo.svg"></img> */}
-            <h1>Home</h1>
-            <p>Hier finden Sie eine Übersicht meiner Projekte</p>
+            <header>
+                <img src="../images/logo1.svg"></img>
+                <div className='header-text'>
+                    <h1>Luca Troger</h1>
+                    <p>Web Developer & Designer</p>
+                </div>
+            </header>
             <ProjectList />
         </main>
     );

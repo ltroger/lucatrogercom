@@ -10,15 +10,9 @@ function ProjectList() {
         },
         {
             id: 2,
-            title: "Consumer Score",
-            description: "An assignment from the Machine Learning Course, regarding consumer behaviour",
-            images: "./images/ml.png"
-        },
-        {
-            id: 3,
-            title: "Funny Gnome Drawing",
-            description: "This is a recent drawing of a gnome I made. He is a jolly fella",
-            images: "./images/gnome.png"
+            title: "City Brew and Bites",
+            description: "Eine Worpress Website für ein fiktionales Cafe, umgesetzt im CMS-Kurs and der FH-Salzburg.",
+            images: ["./images/Cafe/cafe1.webp", "./images/Cafe/cafe2.webp", "./images/Cafe/cafe3.webp"]
         }
     ];
 
@@ -30,11 +24,12 @@ function ProjectList() {
 
     return (
         <div>
-            <br />
             <div className="projects">
+                <h2>Projekte</h2>
                 {projects.map((project) => (
-                    <div key={project.id} className="project">
-                        <h2>{project.title}</h2>
+                    <div key={project.id} className="project" onClick={() => toggleProjectDetails(project.id)}>
+                            {openProject === project.id} 
+                        <h3>{project.title}</h3>
                         <button onClick={() => toggleProjectDetails(project.id)}>
                             {openProject === project.id ? 'Weniger anzeigen' : 'Mehr anzeigen'}
                         </button>
@@ -51,6 +46,18 @@ function ProjectList() {
                                     />
                                 ))}
                             </div>
+                            {/* <div className='popup-images'>
+                                {project.images.map((image, index) => (
+                                    <span>
+                                    <img
+                                        key={index}
+                                        src={image}
+                                        alt={`${project.title} ${index + 1}`}
+                                        className="popup-image"
+                                    />
+                                    </span>
+                                ))}
+                            </div> */}
                         </div>
                         )}
                     </div>
