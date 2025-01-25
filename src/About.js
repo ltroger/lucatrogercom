@@ -10,8 +10,8 @@ const About = () => {
                         <p>Ich bin Web-Entwickler und Grafik-Designer aus Tirol, Österreich.
                             Derzeit studiere ich MultimediaTechnology an der FH Salzburg im Fachbereich Web. Durch meinen Hintergrund im Grafikbereich habe ich ein besonderes Interesse an Frontend-Entwicklung und der Gestaltung von User-Interfaces.
                         </p>
+                        <img src="./images/about.jpg" alt='about-image'></img>
                     </div>
-                    <img src="./images/about.jpg" alt='about-image'></img>
                     <div className='credentials'>
                         <div className='section'>
                             <h2>Ausbildung</h2>
