@@ -15,7 +15,7 @@ function ProjectList() {
             id: 2,
             title: "Burgeria",
             description: "Burgeria ist eine Website für ein fiktives Burgerrestaurant. Sie bietet den Nutzern die Möglichkeit, Essen zu bestellen, sowie einen Tisch zu reservieren. Dieses Projekt wurde als Multimediaprojekt 2a an der FH Salzburg umgesetzt.",
-            images: [],
+            images: ["./images/Burgeria/burgeria1.png", "./images/Burgeria/burgeria2.png", "./images/Burgeria/burgeria3.png"],
             link: "https://team-nebulak.projects.multimediatechnology.at/"
         },
         {
