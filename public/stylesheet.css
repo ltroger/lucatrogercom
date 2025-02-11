@@ -44,6 +44,17 @@
     font-weight: 500;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(15, 9, 192);
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2.5px;
+    text-underline-offset: 5px;
+}
+
 img {
     height: 15em;
     width: 15em;

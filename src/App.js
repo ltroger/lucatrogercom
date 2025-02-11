@@ -8,28 +8,29 @@ import About from './About';
 const App = () => {
   return (
     <main>
-    <Router>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">Über mich</Link></li>
-          <li><Link to="/contact">Kontakt</Link></li>
-        </ul>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <footer>
-        <h3>Links</h3>
-        <ul>
-          <li><Link to="https://www.linkedin.com/in/luca-troger-105a77346/">LinkedIn</Link></li>
-          <li><Link to="https://github.com/ltroger">GitHub</Link></li>
-          <li><Link to="https://portfolio.fh-salzburg.ac.at/users/luca-mathias-troger">Portfolio FH Salzburg</Link></li>
-        </ul>
-      </footer>
-    </Router>
+      <Router>
+        <nav>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">Über mich</Link></li>
+            <li><Link to="/contact">Kontakt</Link></li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <footer>
+          <h3>Links</h3>
+          <ul>
+            <li><a href="Troger-Lebenslauf.pdf" target="_blank">Lebenslauf</a></li>
+            <li><Link to="https://www.linkedin.com/in/luca-troger-105a77346/">LinkedIn</Link></li>
+            <li><Link to="https://github.com/ltroger">GitHub</Link></li>
+            <li><Link to="https://portfolio.fh-salzburg.ac.at/users/luca-mathias-troger">Portfolio FH Salzburg</Link></li>
+          </ul>
+        </footer>
+      </Router>
     </main>
   );
 };
